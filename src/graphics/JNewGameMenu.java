@@ -69,7 +69,7 @@ public class JNewGameMenu extends JFrame {
 					public void actionPerformed(ActionEvent e)
 					{
 						JFrame jGame = new JGame();
-						jGame.setVisible(true);					
+						jGame.setVisible(true);
 						newGameMenu.dispose();
 						
 					}

@@ -1,4 +1,6 @@
 package graphics;
+import java.awt.Graphics;
+
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 
@@ -20,12 +22,14 @@ public class JGame extends JFrame {
 		this.setSize(655, 680);
 		this.setLocation(425 + 50, 100 + 50);
 		this.setResizable(false);
-		this.setDefaultCloseOperation(EXIT_ON_CLOSE);			
+		this.setDefaultCloseOperation(EXIT_ON_CLOSE);
 		
 		//gameBoardPanel.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 		this.add(gameBoardPanel);
 		
 		cnt = new Controller("bin\\maps\\test.txt", gameBoardPanel);
 		this.addKeyListener(cnt);
+		cnt.getView().update();
+		
 	}
 }
