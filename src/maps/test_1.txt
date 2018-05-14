@@ -1,10 +1,10 @@
-8
-1
-0 w N
+10
+10
+0 f N
 1 f N
-2 f N
-3 f N
-4 f N
+2 w N
+3 w N
+4 w N
 5 f N
 6 f N
 7 w N
