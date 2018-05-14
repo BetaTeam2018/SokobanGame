@@ -128,6 +128,7 @@ public class MapLoader {
 				p.setStrength(Integer.parseInt(parts[2]));
 				p.getCurrentField().set(p);
 				players.add(p);
+				p.ID=players.size();
 				
 				GPlayer gp = new GPlayer();
 				gp.setPlayer(p);

@@ -1,5 +1,6 @@
 package view;
 
+import java.awt.Graphics;
 import java.awt.Graphics2D;
 import java.awt.image.BufferedImage;
 
@@ -7,6 +8,7 @@ import javax.swing.JPanel;
 
 import game.Direction;
 import game.Player;
+import graphics.GamePanel;
 
 public class GPlayer extends Drawable{
 	
@@ -14,16 +16,15 @@ public class GPlayer extends Drawable{
 
 	
 	@Override
-	public void Draw(JPanel panel) {
+	public void Draw(Graphics g) {
 		if(player.getCurrentField()!=null)
 		{
-		Graphics2D g = (Graphics2D) panel.getGraphics();
 		BufferedImage img;
 		
 		Direction dir = player.getLastStep();
 		
 		String p;
-		if(player.getID().equals("blue"))
+		if(player.getID()==1)
 			p = "p1";
 		else
 			p = "p2";
@@ -41,7 +42,9 @@ public class GPlayer extends Drawable{
 			default:
 				img = View.images.get(p+"Right");
 				break;
+			
 		}	
+		
 		
 		g.drawImage(img, View.blockSize*player.getPos().getX(),  View.blockSize*player.getPos().getY(), null);
 		}

@@ -12,6 +12,7 @@ import java.io.File;
 import java.io.FileInputStream;
 
 import game.*;
+import graphics.GamePanel;
 import proto.MapLoader;
 import view.View;
 
@@ -42,7 +43,7 @@ public class Controller implements KeyListener{
 	List<Player> players;
 	
 	
-	public Controller(String mapPath, JPanel panel) {
+	public Controller(String mapPath, GamePanel panel) {
 		filePath = mapPath;
 				
 		InputStream is = null;
@@ -56,17 +57,14 @@ public class Controller implements KeyListener{
 		players = ml.getPlayers();
 		g.setMaze(ml.getFields());
 		v.set(ml.getDrawables()); 	//TODO v.set metódus még nincs implementálva
-		v.set(panel);
-		//v.update();
+		v.set(panel.getGraphics());
 		
 		for (Player p : players) {					//játékosoknak a pálya átadása
 			p.setGame(g);
 			p.register(v);	
 		}
 		
-		players.get(0).setID("green");
-		players.get(1).setID("blue");
-		//v.update();
+		v.update();
 	}
 
 

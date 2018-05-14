@@ -1,9 +1,11 @@
 package view;
 
+import java.awt.Graphics;
 import java.awt.Graphics2D;
 import java.awt.image.BufferedImage;
 import javax.swing.JPanel;
 import game.Box;
+import graphics.GamePanel;
 
 
 public class GBox extends Drawable{
@@ -11,10 +13,9 @@ public class GBox extends Drawable{
 	private Box box;
 	
 	@Override
-	public void Draw(JPanel panel) {
+	public void Draw(Graphics g) {
 		if(box.getCurrentField()!=null)
 		{
-		Graphics2D g = (Graphics2D) panel.getGraphics();
 		BufferedImage img;
 		if(box.getOnStorageArea())
 			img = View.images.get("placedBox");

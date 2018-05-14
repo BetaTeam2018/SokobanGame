@@ -1,5 +1,9 @@
 package view;
+import java.awt.Graphics;
+
 import javax.swing.JPanel;
+
+import graphics.GamePanel;
 
 /** 
  * Rajzolható osztályok interfésze.
@@ -12,9 +16,9 @@ public abstract class Drawable implements Comparable<Drawable>{
 	
 	/**
 	 * Kirajzolja az adott objektumot.
-	 * @param panel
+	 * @param g
 	 */
-	public abstract void Draw(JPanel panel);
+	public abstract void Draw(Graphics g);
 	
 	/**
 	 * Mélység beállítása.

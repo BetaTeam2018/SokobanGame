@@ -1,5 +1,6 @@
 package view;
 import java.util.Map;
+import java.awt.Graphics;
 import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.IOException;
@@ -10,6 +11,7 @@ import java.util.List;
 import javax.imageio.ImageIO;
 import javax.swing.JPanel;
 
+import graphics.GamePanel;
 import observerPattern.Observable;
 import observerPattern.Observer;
 
@@ -17,7 +19,7 @@ public class View implements Observer{
 	/**
 	 * A panel mely vászonként szolgál
 	 */
-	private JPanel canvas;
+	private Graphics g;
 	
 	/**
 	 * A rajzolható objektumokat tartalmazza.
@@ -89,8 +91,8 @@ public class View implements Observer{
 	 * A JPanel átadása. Ide fog rajzolni.
 	 * @param panel
 	 */
-	public void set(JPanel img) {
-		canvas = img;
+	public void set(Graphics g) {
+		this.g = g;
 	}
 	
 	/**
@@ -98,7 +100,7 @@ public class View implements Observer{
 	 */
 	public void update() {
 		for (Drawable drawable : drawables) {
-			drawable.Draw(canvas);
+			drawable.Draw(g);
 		}
 	}
 		

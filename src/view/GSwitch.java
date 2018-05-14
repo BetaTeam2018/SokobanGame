@@ -1,18 +1,19 @@
 package view;
 
+import java.awt.Graphics;
 import java.awt.Graphics2D;
 import java.awt.image.BufferedImage;
 
 import javax.swing.JPanel;
 import game.Switch;
+import graphics.GamePanel;
 
 public class GSwitch extends Drawable{
 	
 	private Switch sw;
 	
 	@Override
-	public void Draw(JPanel panel) {
-		Graphics2D g = (Graphics2D) panel.getGraphics();
+	public void Draw(Graphics g) {
 		
 		
 		BufferedImage img;
