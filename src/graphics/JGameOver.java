@@ -4,6 +4,8 @@ import java.awt.BorderLayout;
 import java.awt.Color;
 import java.awt.Font;
 import java.awt.Point;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
 import javax.swing.BorderFactory;
 import javax.swing.JButton;
@@ -28,6 +30,7 @@ public class JGameOver extends JFrame {
 	JLabel player1Label;
 	JLabel player2Label;
 	JLabel winLabel;
+	JButton menuButton;
 	
 	
 	
@@ -72,7 +75,23 @@ public class JGameOver extends JFrame {
 		player2Label.setLocation(new Point(60,150));
 		
 
+		menuButton=new JButton("Back to menu");
+		menuButton.setSize(160,30);
+		menuButton.setBorder(BorderFactory.createBevelBorder(BevelBorder.RAISED));
+		menuButton.setLocation(70,200); 
+		menuButton.addActionListener(new ActionListener()
+				{
+
+					@Override
+					public void actionPerformed(ActionEvent e) {
+						new JMainMenu();
+						frame.dispose();
+						
+					}
+			
+				});
 		
+		mainPanel.add(menuButton);
 		mainPanel.add(player1Label);
 		mainPanel.add(player2Label);
 		mainPanel.add(winLabel);
