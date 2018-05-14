@@ -23,7 +23,6 @@ public class JGameOver extends JFrame {
 	private final int  height = 300;
 
 	JFrame  frame=this;
-	JButton saveExit;
 	JPanel mainPanel;
 	double p1Points;
 	double p2Points;
