@@ -29,7 +29,7 @@ public class JGame extends JFrame {
 		
 		cnt = new Controller("bin\\maps\\test.txt", gameBoardPanel);
 		this.addKeyListener(cnt);
-		cnt.getView().update();
+		//cnt.getView().update();
 		
 	}
 }
