@@ -16,10 +16,11 @@ public class GBox extends Drawable{
 		{
 		Graphics2D g = (Graphics2D) panel.getGraphics();
 		BufferedImage img;
-		if(box.getOnStorageArea()==false)
-			img = View.images.get("box");
+		if(box.getOnStorageArea())
+			img = View.images.get("placedBox");
 		else
 			img = View.images.get("box");
+		
 		g.drawImage(img, View.blockSize*box.getPos().getX(),  View.blockSize*box.getPos().getY(), null);		
 		}
 	}

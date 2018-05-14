@@ -38,6 +38,7 @@ public class StoreageArea extends Floor {
 		super.set(b);
 		pointTo=b.getLastPusher();
 		pointTo.addPoints(pointValue);
+		b.setOnStorageArea(true);
 	}
 	/**
 	 * leveszi a Boxot a StorageAreara és pointValue mennyiségű pontot von le a Playertől
@@ -47,6 +48,7 @@ public class StoreageArea extends Floor {
 		super.remove(b);
 		pointTo.subtractPoints(pointValue);
 		pointTo=null;
+		b.setOnStorageArea(false);
 	}
 	/**
 	 * a kiíráshoz szükséges karaktert adja vissza
