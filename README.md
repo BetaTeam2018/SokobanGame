@@ -1,1 +1,2 @@
-# SokobanGame
+# Grafikus felület specifikációja
+
