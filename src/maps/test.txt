@@ -34,7 +34,7 @@
 31 f N
 32 f N
 33 f N
-34 f N
+34 t N
 35 f N
 36 f N
 37 f N
@@ -48,7 +48,7 @@
 45 f N
 46 f N
 47 f N
-48 f N
+48 s N 34
 49 w N
 50 w N
 51 f N
@@ -82,7 +82,7 @@
 79 w N
 80 w N
 81 f N
-82 f N
+82 a N
 83 f N
 84 f N
 85 f N

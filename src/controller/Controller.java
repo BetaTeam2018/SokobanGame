@@ -78,6 +78,7 @@ public class Controller implements KeyListener{
 			if(players.get(i).getCurrentField()==null)
 				deadPlayer=true;
 		}
+		
 		int keyCode = e.getKeyCode();		
 		switch(keyCode) {
 		
