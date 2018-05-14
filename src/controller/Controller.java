@@ -63,6 +63,9 @@ public class Controller implements KeyListener{
 			p.setGame(g);
 			p.register(v);	
 		}
+		
+		players.get(0).setID("green");
+		players.get(1).setID("blue");
 		//v.update();
 	}
 

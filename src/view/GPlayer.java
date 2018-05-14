@@ -22,18 +22,24 @@ public class GPlayer extends Drawable{
 		
 		Direction dir = player.getLastStep();
 		
+		String p;
+		if(player.getID().equals("blue"))
+			p = "p1";
+		else
+			p = "p2";
+		
 		switch(dir) {
 			case UP: 
-				img = View.images.get("p2Up");
+				img = View.images.get(p+"Up");
 				break;
 			case  DOWN:
-				img = View.images.get("p2Down");
+				img = View.images.get(p+"Down");
 				break;
 			case LEFT:
-				img = View.images.get("p2Left");
+				img = View.images.get(p+"Left");
 				break;
 			default:
-				img = View.images.get("p2Right");
+				img = View.images.get(p+"Right");
 				break;
 		}	
 		

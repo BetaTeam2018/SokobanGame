@@ -42,6 +42,8 @@ public class Player extends Thing implements Observable{
 	 * a Player ereje
 	 */
 	private int strength;
+	
+		
 		/**
 		 * Konstruktor amely a megadott játékkal hozza létre a Playert
 		 * 0 erővel és ponttal
@@ -75,7 +77,7 @@ public class Player extends Thing implements Observable{
 	public void setGame(Game game) {	//beállítja a játékot
 		this.game = game;
 	}
-
+	
 	/**
 	 * visszaadja a Player pontjait
 	 * @return
@@ -225,4 +227,20 @@ public class Player extends Thing implements Observable{
 	public Direction getLastStep() {
 		return lastStep;
 	}
+	
+	/**
+	 * Azonosító
+	 */
+	public String ID;
+
+
+	public String getID() {
+		return ID;
+	}
+	public void setID(String iD) {
+		ID = iD;
+	}
+	
+	
+	
 }
