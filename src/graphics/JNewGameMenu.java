@@ -68,10 +68,9 @@ public class JNewGameMenu extends JFrame {
 				{
 					public void actionPerformed(ActionEvent e)
 					{
-						JFrame jGame = new JGame();
-						jGame.setVisible(true);
-						newGameMenu.dispose();
-						
+						JGame jGame = new JGame();
+						jGame.setVisible(true);						
+						newGameMenu.dispose();						
 					}
 				});
 		mainPanel.add(btnStart);

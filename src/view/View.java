@@ -89,8 +89,8 @@ public class View implements Observer{
 	 * A JPanel átadása. Ide fog rajzolni.
 	 * @param panel
 	 */
-	public void set(JPanel panel) {
-		canvas = panel;
+	public void set(JPanel img) {
+		canvas = img;
 	}
 	
 	/**

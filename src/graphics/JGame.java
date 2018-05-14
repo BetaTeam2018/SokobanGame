@@ -23,13 +23,8 @@ public class JGame extends JFrame {
 		this.setLocation(425 + 50, 100 + 50);
 		this.setResizable(false);
 		this.setDefaultCloseOperation(EXIT_ON_CLOSE);
-		
-		//gameBoardPanel.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 		this.add(gameBoardPanel);
-		
 		cnt = new Controller("bin\\maps\\test.txt", gameBoardPanel);
 		this.addKeyListener(cnt);
-		//cnt.getView().update();
-		
 	}
 }

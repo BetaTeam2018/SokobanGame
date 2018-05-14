@@ -65,6 +65,7 @@ public class Switch extends Floor {
 		super.remove(b);
 		td.close();
 	}
+	
 	/**
 	 * kiiratáshoz szükséges
 	 * @return String
