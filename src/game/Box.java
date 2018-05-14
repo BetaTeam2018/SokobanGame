@@ -48,8 +48,7 @@ public class Box extends Thing {
 	 */
 	@Override
 	public void die()
-	{
-		this.getCurrentField().set((Box)null);	// a fieldről elvesszük a dobozt
+	{		
 		super.die();
 	}
 	/**
