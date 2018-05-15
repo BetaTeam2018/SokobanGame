@@ -47,6 +47,7 @@ public class JGame extends JFrame {
 		cnt = new Controller("bin\\maps\\test.txt", gameBoardPanel);
 		gameBoardPanel.setView(cnt.getView());
 		//gameBoardPanel.addKeyListener(cnt);
+		
 		this.addKeyListener(cnt);
 		
 		pack();
