@@ -17,6 +17,5 @@ public class GamePanel extends JPanel{
 	{
 		view.update();
 	}
-		//view.update();
 	}
 
