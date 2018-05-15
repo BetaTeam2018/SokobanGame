@@ -16,7 +16,7 @@ import graphics.GamePanel;
 import proto.MapLoader;
 import view.View;
 
-public class Controller implements KeyListener{
+public class Controller implements KeyListener {
 	/**
 	 * A betöltendő pálya elérési útja.
 	 */
@@ -41,6 +41,7 @@ public class Controller implements KeyListener{
 	 * A játékosok.
 	 */
 	List<Player> players;
+	
 	
 	
 	public Controller(String mapPath, GamePanel panel) {
@@ -79,7 +80,7 @@ public class Controller implements KeyListener{
 			if(players.get(i).getCurrentField()==null)
 				deadPlayer=true;
 		}
-		
+		System.out.println("Hello");
 		int keyCode = e.getKeyCode();		
 		switch(keyCode) {
 		

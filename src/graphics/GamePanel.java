@@ -7,16 +7,24 @@ import java.io.IOException;
 import javax.imageio.ImageIO;
 import javax.swing.JPanel;
 
+import controller.Controller;
 import view.View;
 
 public class GamePanel extends JPanel{
 	private static final long serialVersionUID = 1L;
-	public View view;
+	private View view;
+
+	
 	@Override
 	public void paintComponent(Graphics g)
 	{
-		
+		super.paintComponent(g);
+		view.set(g);
+		view.update();
 	}
-		//view.update();
+	
+	public void setView(View v) {
+		this.view = v;
+	}
 	}
 
