@@ -30,5 +30,9 @@ public class GamePanel extends JPanel{
 	public void setView(View v) {
 		this.view = v;
 	}
+	public View getView()
+	{
+		return view;
+	}
 	}
 
