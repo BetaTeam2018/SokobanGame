@@ -38,18 +38,15 @@ public class JGame extends JFrame {
 		mainPanel.setLayout(new BoxLayout(mainPanel, BoxLayout.Y_AXIS));
 		gameBoardPanel.setPreferredSize(new Dimension(655, 650));
 		scorePanel.setPreferredSize(new Dimension(655, 150));
-		
 		mainPanel.add(gameBoardPanel);
 		mainPanel.add(scorePanel);
 		
 		this.add(mainPanel);
-		
+
 		cnt = new Controller("bin\\maps\\test.txt", gameBoardPanel);
 		gameBoardPanel.setView(cnt.getView());
-		//gameBoardPanel.addKeyListener(cnt);
-		
+		gameBoardPanel.addKeyListener(cnt);
 		this.addKeyListener(cnt);
-		
 		pack();
 		
 	}

@@ -74,12 +74,7 @@ public class Controller implements KeyListener {
 
 	@Override
 	public void keyPressed(KeyEvent e) {
-		boolean deadPlayer=false;
-		for (int i=0;i<players.size();i++)
-		{
-			if(players.get(i).getCurrentField()==null)
-				deadPlayer=true;
-		}
+		
 		System.out.println("Hello");
 		int keyCode = e.getKeyCode();		
 		switch(keyCode) {

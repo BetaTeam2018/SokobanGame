@@ -14,7 +14,11 @@ public class GamePanel extends JPanel{
 	private static final long serialVersionUID = 1L;
 	private View view;
 
-	
+	public GamePanel()
+	{
+		super();
+		this.setFocusable(true);
+	}
 	@Override
 	public void paintComponent(Graphics g)
 	{
