@@ -17,7 +17,7 @@ public class GPlayer extends Drawable{
 	
 	@Override
 	public void Draw(Graphics g) {
-		if(player.getCurrentField()!=null)
+		if(player.getCurrentField()!=null&&g!=null)
 		{
 		BufferedImage img;
 		

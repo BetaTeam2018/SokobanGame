@@ -14,7 +14,8 @@ public class GTrapDoor extends Drawable{
 	
 	@Override
 	public void Draw(Graphics g) {
-		
+		if(g!=null)
+		{
 		BufferedImage img;
 		if(trap.getState())
 			img = View.images.get("hole"); //ha nyitva van akkor holenak néz ki
@@ -22,6 +23,7 @@ public class GTrapDoor extends Drawable{
 			img = View.images.get("trap"); //egyébként
 		
 		g.drawImage(img, View.blockSize*trap.getPos().getX(),  View.blockSize*trap.getPos().getY(), null);		
+		}
 	}
 	
 	public void setTrapDoor(TrapDoor trap) {

@@ -16,7 +16,8 @@ public class GFloor extends Drawable{
 	
 	@Override
 	public void Draw(Graphics g) {
-		
+		if(g!=null)
+		{
 		BufferedImage img; 		
 		
 		if(floor.getFriction() == Friction.NORMAL)
@@ -27,6 +28,7 @@ public class GFloor extends Drawable{
 			img = View.images.get("hFloor");
 	
 		g.drawImage(img, View.blockSize*floor.getPos().getX(),  View.blockSize*floor.getPos().getY(), null);
+		}
 	}
 	
 	public void setFloor(Floor floor) {

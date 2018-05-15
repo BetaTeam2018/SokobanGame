@@ -45,7 +45,6 @@ public class Controller implements KeyListener{
 	
 	public Controller(String mapPath, GamePanel panel) {
 		filePath = mapPath;
-				
 		InputStream is = null;
 		try {
 			is = new FileInputStream(new File(filePath)); //fájl megnyitása
@@ -53,17 +52,17 @@ public class Controller implements KeyListener{
 			e.printStackTrace();
 		}
 
+
 		ml.Load(is);								//pálya betöltése és a szükséges változók beállítása
 		players = ml.getPlayers();
 		g.setMaze(ml.getFields());
 		v.set(ml.getDrawables()); 	//TODO v.set metódus még nincs implementálva
 		v.set(panel.getGraphics());
-		
+		panel.view=v;
 		for (Player p : players) {					//játékosoknak a pálya átadása
 			p.setGame(g);
 			p.register(v);	
 		}
-		
 		v.update();
 	}
 

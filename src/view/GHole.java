@@ -14,9 +14,11 @@ public class GHole extends Drawable{
 	
 	@Override
 	public void Draw(Graphics g) {
+		if(g!=null)
+		{
 		BufferedImage img = View.images.get("hole");
 		g.drawImage(img, View.blockSize*hole.getPos().getX(),  View.blockSize*hole.getPos().getY(), null);
-		
+		}
 	}
 	
 	public void setHole(Hole hole) {

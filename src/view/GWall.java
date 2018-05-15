@@ -13,8 +13,11 @@ public class GWall extends Drawable{
 	
 	@Override
 	public void Draw(Graphics g) {
+		if(g!=null)
+		{
 		BufferedImage img = View.images.get("wall");
 		g.drawImage(img, View.blockSize*wall.getPos().getX(),  View.blockSize*wall.getPos().getY(), null);		
+		}
 	}
 	
 	public void setFloor(Wall wall){

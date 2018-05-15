@@ -12,7 +12,7 @@ public class JGame extends JFrame {
 	 * 
 	 */
 	private static final long serialVersionUID = 1L;
-	private GamePanel gameBoardPanel = new GamePanel();
+	private GamePanel gameBoardPanel=new GamePanel();
 	
 	//TODO input fájl a menüben lévő comobox alapján
 	private Controller cnt;
@@ -25,7 +25,10 @@ public class JGame extends JFrame {
 		this.setDefaultCloseOperation(EXIT_ON_CLOSE);
 		this.add(gameBoardPanel);
 		this.setVisible(true);
+
 		cnt = new Controller("bin\\maps\\test.txt", gameBoardPanel);
+		
+
 		this.addKeyListener(cnt);
 	}
 }

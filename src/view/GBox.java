@@ -14,7 +14,7 @@ public class GBox extends Drawable{
 	
 	@Override
 	public void Draw(Graphics g) {
-		if(box.getCurrentField()!=null)
+		if(box.getCurrentField()!=null&&g!=null)
 		{
 		BufferedImage img;
 		if(box.getOnStorageArea())

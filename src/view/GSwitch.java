@@ -15,7 +15,8 @@ public class GSwitch extends Drawable{
 	@Override
 	public void Draw(Graphics g) {
 		
-		
+		if(g!=null)
+		{
 		BufferedImage img;
 		if(sw.getThing() == null)
 			img = View.images.get("swOFF");
@@ -23,6 +24,7 @@ public class GSwitch extends Drawable{
 			img = View.images.get("swON");
 		
 		g.drawImage(img, View.blockSize*sw.getPos().getX(),  View.blockSize*sw.getPos().getY(), null);		
+		}
 	}
 	
 	public void setSwitch(Switch sw) {
