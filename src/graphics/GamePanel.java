@@ -15,7 +15,8 @@ public class GamePanel extends JPanel{
 	@Override
 	public void paintComponent(Graphics g)
 	{
-		view.update();
+		//view.update();
+		g.drawString("Hello", 0, this.getHeight());
 	}
 	}
 
